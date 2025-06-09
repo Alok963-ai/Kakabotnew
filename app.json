@@ -1,0 +1,61 @@
+{
+    "name": "KAKA BOTS",
+    "description": "",
+    "stack": "heroku-22",
+    "keywords": [
+      "telegram"
+    ],
+    "website": "",
+    "repository": "",
+    "env": {
+      "BOT_TOKEN": {
+        "description": "",
+        "value": ""
+      },
+      "API_ID": {
+        "description": "",
+        "value": ""
+      },
+      "API_HASH": {
+        "description": "",
+        "value": ""
+      },
+      "OWNER_ID": {
+        "description": "",
+        "value": "",
+        "required": true
+      },
+      "DATABASE_NAME": {
+        "description": "DRM KAKA BOTS",
+        "value": "kakauploaderbotuser",
+        "required": false
+      },
+      "DATABASE_URL": {
+        "description": "REPLACE YOUR DATABASE URL",
+        "value": "mongodb+srv://alokjangde6:1q9XguXoXiV6HMog@cluster0.cx60pkr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "required": true
+      },
+      "LOG_CHANNEL": {
+        "description": "LOG CHANNEL ID",
+        "value": "1002548493129"
+      }
+    },
+    "addons": [],
+    "buildpacks": [
+      {
+        "url": "https://github.com/amivin/aria2-heroku.git"
+      },
+      {
+        "url": "heroku/python"
+      },
+      {
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+      }
+    ],
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "standard-2x"
+      }
+    }
+}
